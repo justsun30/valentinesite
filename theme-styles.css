@@ -1,0 +1,91 @@
+/* Estilos para o tema claro/escuro */
+:root {
+  --bg-image: url('version3.png');
+  --bg-overlay: none;
+  --text-color: #333;
+  --header-bg: linear-gradient(135deg, #ffcbdb 0%, #fce4ec 100%);
+  --nav-bg: rgba(252, 228, 236, 0.9);
+  --section-bg: rgba(255, 255, 255, 0.2);
+  --card-bg: rgba(255, 238, 245, 0.8);
+  --accent-color: #c2185b;
+  --accent-dark: #880e4f;
+  --btn-gradient: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+  --bg-image: url('version3.png');
+  --bg-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  --text-color: #f0f0f0;
+  --header-bg: linear-gradient(135deg, #4a0d2b 0%, #2c0a1a 100%);
+  --nav-bg: rgba(42, 10, 25, 0.9);
+  --section-bg: rgba(30, 10, 20, 0.6);
+  --card-bg: rgba(60, 20, 40, 0.8);
+  --accent-color: #ff6b9d;
+  --accent-dark: #ff8fb0;
+  --btn-gradient: linear-gradient(135deg, #ff4081 0%, #c51162 100%);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-image: var(--bg-overlay), var(--bg-image);
+  background-blend-mode: overlay;
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+header {
+  background: var(--header-bg) !important;
+  transition: background 0.5s ease;
+}
+
+nav {
+  background: var(--nav-bg) !important;
+  transition: background 0.5s ease;
+}
+
+section {
+  background: var(--section-bg) !important;
+  transition: background 0.5s ease;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.theme-toggle:hover {
+  transform: rotate(45deg) scale(1.2);
+}
+
+.dark-theme .theme-toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme nav a {
+  color: #ff8fb0;
+}
+
+.dark-theme h1, .dark-theme h2, .dark-theme h3 {
+  color: #ff6b9d;
+}
+
+.dark-theme p, .dark-theme li {
+  color: #f0f0f0;
+}
+
+.dark-theme .btn-surpresa, .dark-theme .btn-bem-vindo {
+  background: var(--btn-gradient);
+}
+
+.dark-theme #cartinha, .dark-theme .quiz-pergunta, .dark-theme .linha-do-tempo li, .dark-theme .motivos li {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 10px var(--shadow-color);
+}

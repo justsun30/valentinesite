@@ -1,0 +1,3487 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vini TadeuS 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Indie+Flower&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="features-style.css" />
+  <link rel="stylesheet" href="theme-styles.css" />
+  <link rel="stylesheet" href="secret-messages.css" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+       background-image: url('version3.png');
+  background-size: cover;       /* cobre a tela inteira */
+  background-position: center;  /* centraliza a imagem */
+  background-repeat: no-repeat; /* não repete a imagem */
+  background-attachment: fixed; /* a imagem não rola junto */
+  font-family: 'Arial', sans-serif;
+    }
+    header {
+       background-color: #ffcbdb; 
+      padding: 30px 20px; text-align: center; 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
+
+    header h1 { 
+      font-family: 'Great Vibes', cursive;
+     font-size: 3em; color: #880e4f; 
+    }
+
+    nav {
+      display: flex; flex-wrap: wrap; 
+      justify-content: center;
+      background-color: #fce4ec;
+       padding: 10px; position: sticky;
+        top: 0; 
+        z-index: 10;
+    }
+
+    nav a {
+       margin: 0 10px; text-decoration: none; 
+       color: #880e4f; 
+       font-weight: bold;
+        transition: color 0.3s; 
+      }
+
+    nav a:hover { 
+      color: #c2185b; }
+
+    section { 
+      padding: 50px 20px;
+       max-width: 1000px; 
+       margin: auto;
+       }
+
+    section h2 {
+       font-size: 2em; 
+       margin-bottom: 20px; 
+       color: #ad1457;
+       }
+
+#cartinha {
+  background: rgba(255, 255, 255, 0.2); /* fundo branco transparente */
+  backdrop-filter: blur(10px); /* esse é o blur */
+  -webkit-backdrop-filter: blur(10px); /* suporte pra Safari */
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 600px;
+  color: #3b3b3b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+    .btn-surpresa {
+       background-color: #c2185b; 
+       color: white;
+        padding: 15px 30px;
+         border: none;
+          border-radius: 30px; 
+          font-size: 1em; cursor: pointer;
+           transition: background 0.3s;
+           }
+           
+    .btn-surpresa:hover { 
+      background-color: #ad1457; 
+    }
+
+    #presente { 
+      display: none; 
+      margin-top: 20px;
+       font-size: 1.2em; color: #880e4f;
+        background-color: #ffe6f0;
+         padding: 20px; 
+         border-radius: 20px; 
+        }
+
+    .hidden-button { 
+      position: fixed; 
+      bottom: 10px;
+       right: 10px; 
+       background: none; 
+       border: none; 
+       cursor: pointer;
+       }
+
+    .hidden-button img {
+       width: 40px;
+        height: 40px;
+         opacity: 0.3; transition: opacity 0.3s; 
+        }
+        
+    .hidden-button img:hover {
+       opacity: 1; 
+      }
+
+    .linha-do-tempo ul, .motivos ul {
+       list-style: none;
+        padding: 0;
+       }
+       
+    .linha-do-tempo li, .motivos li { 
+      margin-bottom: 10px;
+       background-color: #ffeef5; 
+       padding: 10px; border-radius: 10px;
+       }
+
+    .quiz-pergunta {
+       margin-bottom: 20px; 
+      }
+    .quiz-opcao { 
+      display: block;
+       margin: 5px 0;
+       }
+
+    .filmes-grid { 
+      display: flex;
+       flex-wrap: wrap; 
+       gap: 15px;
+        justify-content: center;
+           margin-top: 50px;
+      }
+
+   .filme {
+  cursor: pointer;
+  text-decoration: none;
+  color: #c2185b;
+  display: inline-block; /* ou block/flex, dependendo do layout desejado */
+  transition: 0.3s;
+}
+
+.filme:hover {
+  opacity: 0.9; /* ou outro efeito visual suave */
+  transform: scale(1.1); /* aumenta 10% no hover */
+  color: #e91e63; /* opcional: muda a cor quando passa o mouse */
+}
+
+    .filme { background-color: #fff0f5; border-radius: 10px; padding: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .filme img { width: 100%; border-radius: 10px; }
+
+
+    /* Estilo fofinho pro Quiz */
+#quiz {
+  background: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(194, 123, 170, 0.3);
+  padding: 30px 25px;
+  max-width: 600px;
+  margin: 40px auto;
+  color: #880e4f;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#quiz h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.4em;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ad1457;
+  text-shadow: 1px 1px 4px #f8bbd0;
+}
+
+.quiz-pergunta {
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background-color: #ffe6f0;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 4px rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s ease;
+}
+
+.quiz-pergunta:hover {
+  background-color: #ffcce1;
+}
+
+.quiz-pergunta h3 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.quiz-opcao {
+  display: block;
+  margin: 8px 0;
+  font-size: 1em;
+  cursor: pointer;
+  padding-left: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-opcao input[type="radio"] {
+  margin-right: 12px;
+  accent-color: #c2185b;
+  cursor: pointer;
+  transform: scale(1.3);
+  vertical-align: middle;
+}
+
+.quiz-opcao:hover {
+  background-color: #f8bbd0;
+}
+
+#submit-quiz {
+  display: block;
+  margin: 30px auto 0 auto;
+  background-color: #c2185b;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1em;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(194, 24, 91, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#submit-quiz:hover {
+  background-color: #ad1457;
+  box-shadow: 0 8px 15px rgba(173, 20, 87, 0.9);
+}
+
+#quiz-result {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 1.3em;
+  color: #880e4f;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px #fce4ec;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Container para os corações flutuantes (com z-index negativo) -->
+  <div id="floating-hearts" style="z-index: -1;"></div>
+  
+
+  
+  <!-- Script para os corações flutuantes -->
+  <script src="floating-hearts-custom.js"></script>
+  <!-- Script para alternar tema -->
+  <script src="theme-toggle.js"></script>
+  <!-- Script para mensagens secretas -->
+  <script src="secret-messages.js"></script>
+  
+  <header>
+    <h1>Para o meu Vini 💖</h1>
+  </header>
+
+  <nav>
+    <a href="#cartinha">Cartinha</a>
+    <a href="#galeria">Fotos</a>
+    <a href="#linha-do-tempo">Nossa História</a>
+    <a href="#motivos">Motivos</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#filmes">Filmes</a>
+    <a href="#musica">Música</a>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">🌙</button>
+  </nav>
+
+
+  <section id="cartinha">
+    <h2>💌 Dear baby </h2>
+    <p id="texto-digitado"></p>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const textoCompleto = `Mo, desde o dia que você chegou, meu mundo ficou mais bonito, mais leve e cheio de sentido. 🌹
+
+Cada risada sua é música pro meu coração, cada abraço seu é um abrigo que me acalma. Não tem um dia que eu não agradeça por ter você ao meu lado.
+
+Obrigada por me amar do jeitinho que eu sou, por me apoiar, por ser meu companheiro, meu melhor amigo e meu amor. 💑
+
+Eu te amo mais do que palavras podem explicar. Que esse Dia dos Namorados seja mais um capítulo lindo da nossa história. 💖`;
+      
+      const elementoTexto = document.getElementById('texto-digitado');
+      let i = 0;
+      let velocidade = 50; // velocidade da digitação em milissegundos
+      
+      function digitarTexto() {
+        if (i < textoCompleto.length) {
+          // Se encontrar quebra de linha, adiciona um <br> (apenas um)
+          if (textoCompleto.charAt(i) === '\n') {
+            elementoTexto.innerHTML += '<br>';
+          } else {
+            elementoTexto.innerHTML += textoCompleto.charAt(i);
+          }
+          i++;
+          
+          // Variação aleatória na velocidade para parecer mais humano
+          const variacao = Math.random() * 100 - 50; // variação de -50ms a +50ms
+          
+          // Pausa mais longa em pontuações
+          const pontuacoes = ['.', ',', '!', '?', ':'];
+          if (pontuacoes.includes(textoCompleto.charAt(i-1))) {
+            setTimeout(digitarTexto, velocidade + 300 + variacao);
+          } else {
+            setTimeout(digitarTexto, velocidade + variacao);
+          }
+        } else {
+          // Adiciona cursor piscando no final
+          elementoTexto.innerHTML += '<span class="cursor-piscando">|</span>';
+        }
+      }
+      
+      // Inicia a digitação quando a página carregar
+      setTimeout(digitarTexto, 1000);
+    });
+  </script>
+  
+  <style>
+    #texto-digitado {
+      min-height: 200px;
+      line-height: 1.6;
+      font-size: 1.2em;
+      text-shadow: 0 0 1px rgba(0,0,0,0.1);
+    }
+    
+    .cursor-piscando {
+      animation: piscar 1s infinite;
+      font-weight: bold;
+      color: #c2185b;
+    }
+    
+    @keyframes piscar {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+ <section id="galeria" class="galeria">
+  <h2>📸 Our Moments</h2>
+  <div class="polaroid-carousel-container">
+    <button class="polaroid-carousel-btn prev" id="prevBtn">❮</button>
+    <div class="polaroid-carousel-viewport" id="carouselViewport">
+      <div class="polaroid-carousel-track" id="carousel-track">
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/1.jpg" alt="Foto 1" />
+          </div>
+          <div class="polaroid-caption">Nosso momento</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/2.jpg" alt="Foto 2" />
+          </div>
+          <div class="polaroid-caption">Juntos</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/3.jpg" alt="Foto 3" />
+          </div>
+          <div class="polaroid-caption">Sorrisos</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/4.jpg" alt="Foto 4" />
+          </div>
+          <div class="polaroid-caption">Memórias</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/5.jpg" alt="Foto 5" />
+          </div>
+          <div class="polaroid-caption">Amor</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/6.jpg" alt="Foto 6" />
+          </div>
+          <div class="polaroid-caption">Felicidade</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/7.jpg" alt="Foto 7" />
+          </div>
+          <div class="polaroid-caption">Nós</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/8.jpg" alt="Foto 8" />
+          </div>
+          <div class="polaroid-caption">Sempre</div>
+          <div class="polaroid-tape"></div>
+        </div>
+        <div class="polaroid">
+          <div class="polaroid-image">
+            <img src="img/9.jpg" alt="Foto 9" />
+          </div>
+          <div class="polaroid-caption">Para sempre</div>
+          <div class="polaroid-tape"></div>
+        </div>
+      </div>
+    </div>
+    <button class="polaroid-carousel-btn next" id="nextBtn">❯</button>
+  </div>
+</section>
+
+<style>
+  .galeria {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1px);
+    border-radius: 16px;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(194, 24, 91, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 40px auto;
+  }
+
+  .galeria h2 {
+    font-size: 2.2rem;
+    color: #ad1457;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7);
+  }
+
+  /* Estilo do carrossel de polaroids */
+  .polaroid-carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .polaroid-carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 30px 0;
+    position: relative;
+  }
+
+  .polaroid-carousel-viewport::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+  }
+
+  .polaroid-carousel-track {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+    width: max-content;
+  }
+
+  /* Estilo das polaroids */
+  .polaroid {
+    background-color: #fff;
+    padding: 15px 15px 40px 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.4s ease;
+    transform: rotate(var(--rotation, -2deg));
+    max-width: 280px;
+    width: 280px;
+    margin: 0 20px 20px 20px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .polaroid:nth-child(odd) {
+    --rotation: 2deg;
+  }
+
+  .polaroid:nth-child(3n) {
+    --rotation: -1deg;
+  }
+
+  .polaroid:nth-child(3n+1) {
+    --rotation: 1deg;
+  }
+
+  .polaroid:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  .polaroid-image {
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    background-color: #fff;
+  }
+
+  .polaroid-image img {
+    max-width: 100%;
+    max-height: 230px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    filter: saturate(1) contrast(1.05);
+    transition: all 0.5s ease;
+    border: 1px solid #f8bbd0;
+  }
+
+  .polaroid:hover .polaroid-image img {
+    filter: saturate(1.1) contrast(1.2);
+    transform: scale(1.03);
+  }
+
+  .polaroid-caption {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+
+  /* Fita adesiva decorativa */
+  .polaroid-tape {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(var(--tape-rotation, -2deg));
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+  }
+
+  .polaroid:nth-child(odd) .polaroid-tape {
+    --tape-rotation: 2deg;
+  }
+
+  .polaroid:nth-child(3n) .polaroid-tape {
+    left: 30px;
+    transform: translateX(0) rotate(-5deg);
+  }
+
+  .polaroid:nth-child(3n+1) .polaroid-tape {
+    left: auto;
+    right: 30px;
+    transform: translateX(0) rotate(5deg);
+  }
+
+  /* Botões de navegação */
+  .polaroid-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #ffcbdb 0%, #fce4ec 100%);
+    border: none;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    color: #ad1457;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+  }
+
+  .polaroid-carousel-btn:hover {
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 8px 20px rgba(194, 24, 91, 0.5);
+    opacity: 1;
+  }
+
+  .polaroid-carousel-btn:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .polaroid-carousel-btn.prev {
+    left: 15px;
+  }
+
+  .polaroid-carousel-btn.next {
+    right: 15px;
+  }
+  
+  /* Melhorias visuais para os botões */
+  .polaroid-carousel-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(194, 24, 91, 0.5);
+  }
+  
+  .polaroid-carousel-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .polaroid-carousel-btn:hover::before {
+    opacity: 0.5;
+  }
+  
+  /* Indicador de posição */
+  .polaroid-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  
+  .polaroid-carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(194, 24, 91, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .polaroid-carousel-indicator:hover {
+    background-color: rgba(194, 24, 91, 0.5);
+    transform: scale(1.2);
+  }
+  
+  .polaroid-carousel-indicator.active {
+    background-color: #c2185b;
+    transform: scale(1.4);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 10px rgba(194, 24, 91, 0.5);
+  }
+  
+  .polaroid-carousel-indicator::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+  
+  .polaroid-carousel-indicator.active::after {
+    border-color: rgba(194, 24, 91, 0.3);
+  }
+
+  /* Efeito de sombra nas polaroids */
+  .polaroid::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 70%;
+    height: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: rotate(3deg);
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+
+  .polaroid:hover::before {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Efeitos adicionais para o carrossel */
+  .polaroid.active {
+    transform: scale(1.05) rotate(0deg) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    z-index: 5;
+  }
+  
+  .carousel-initialized .polaroid {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.9); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  
+  /* Melhorias para dispositivos móveis */
+  @media (max-width: 768px) {
+    .polaroid-carousel-btn {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+    
+    .polaroid-carousel-btn.prev {
+      left: 5px;
+    }
+    
+    .polaroid-carousel-btn.next {
+      right: 5px;
+    }
+    
+    .polaroid {
+      max-width: 220px;
+      width: 220px;
+    }
+    
+    .polaroid-image {
+      height: 200px;
+    }
+    
+    .polaroid-image img {
+      max-height: 180px;
+      height: auto;
+    }
+  }
+</style>
+
+<script src="carrossel-fix.js"></script>
+
+
+ <section id="linha-do-tempo" class="linha-do-tempo">
+  <h2>📅 Our Timeline</h2>
+  <ul>
+    <li onclick="mostrarTexto('texto1')" class="clicavel">💘 Quando nos conhecemos</li>
+    <div id="texto1" class="texto-explicativo">Algo completamente aleatório, te ver num bar saindo da escola com as pessoas mais improvaveis, vivendo nos mesmos lugares, com "as mesmas" pessoas, mas cronologicamente destinados à aquele momento, naquele lugar...</div>
+
+    <li onclick="mostrarTexto('texto2')" class="clicavel">💋 Nosso primeiro beijo</li>
+    <div id="texto2" class="texto-explicativo">Uma garota a muito tempo andando pela rua deseperada por um banheiro, e um garoto nervoso derrubando suas lentes de contato no chão de nervosismo para impressiona-la. Coincidentemente, o garoto morava ali perto e podia resolver âmbos problemas com uma cajadada. Mesmo ela em sua casa ainda estava tímido para tomar uma atitude mas ainda ânsiava um beijo. Voltando de encontro com amigos, um semáforo, que lugar e momento perfeito não?. -"posso te beijar? acho que não teremos outro momento..." </div>
+
+    <li onclick="mostrarTexto('texto3')" class="clicavel">✈️ Primeira viagem juntos</li>
+    <div id="texto3" class="texto-explicativo">Andarílhos vivendo aventuras atrás de outras mais, que nunca vamos esquecer. Mas quando se trata de viajar com a famíla da pessoa que te escolheu como família dá um friozinho na barriga. E mesmo assim, uma aventura inesquecível surgiu, onde mora no meu coração, tão adultos...</div>
+
+    <li onclick="mostrarTexto('texto4')" class="clicavel">🎉 Primeiro ano novo juntos</li>
+    <div id="texto4" class="texto-explicativo">Um dia tão estimado e ideial para tantos planos, mas não foi exatamente como pensavam. E mesmo o destino tendo os reservado uma aventura mais da mesma, estar com ele é como estar em casa sem ter um teto. Rindo e celebrando a vida...</div>
+
+    <li onclick="mostrarTexto('texto7')" class="clicavel">🌟 Momentos especiais que construímos juntos</li>
+    <div id="texto7" class="texto-explicativo">Cada dia melhor que o outro. <br>내가 뭐랬어? 이길 거랬잖아<br>
+                                               믿지 못했어 (정말), 이길 수 있을까?<br>
+                                               이 기적 아닌 기적을 우리가 만든 걸까? (No)<br>
+                                               난 여기 있었고 니가 내게 다가와준 거야<br>
+                                               I do believe your galaxy<br>
+                                               듣고 싶어 너의 멜로디<br>
+                                               너의 은하수의 별들은 너의 하늘을 과연 어떻게 수놓을지 (ayy)<br>
+                                               나의 절망 끝에 결국 내가 널 찾았음을 잊지마<br>
+                                               넌 절벽 끝에 서 있던 내 마지막 이유야<br>
+                                               Live<br>
+                                               내가 나인 게 싫은 날<br>
+                                               영영 사라지고 싶은 날<br>
+                                               문을 하나 만들자, 너의 맘 속에다<br>
+                                               그 문을 열고 들어가면, 이 곳이 기다릴 거야<br>
+                                               믿어도 괜찮아<br>
+                                               널 위로해 줄 magic shop<br>
+                                               따뜻한 차 한 잔을 마시며<br>
+                                               저 은하수를 올려다보며<br>
+                                               넌 괜찮을 거야, oh, 여긴 magic shop<br>
+                                               So show me (I'll show you)<br>
+                                               Show you, show you</div>
+  </ul>
+</section>
+
+<style>
+  .linha-do-tempo ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 600px;
+    margin: auto;
+  }
+  .linha-do-tempo li {
+    background-color: #ffeef5;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 1.2em;
+    box-shadow: 2px 3px 8px rgba(194, 118, 162, 0.3);
+    color: #880e4f;
+    cursor: pointer;
+    user-select: none;
+  }
+  .linha-do-tempo li:hover {
+    background-color: #f9cee8;
+  }
+  .texto-explicativo {
+    background-color: #fff0f5;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 0 0 15px 20px;
+    color: #ad1457;
+    display: none;
+    font-size: 1em;
+    max-width: 580px;
+  }
+</style>
+<script>
+  function mostrarTexto(id) {
+    const textos = document.querySelectorAll('.texto-explicativo');
+    textos.forEach(t => {
+      if (t.id === id) {
+        t.style.display = t.style.display === 'block' ? 'none' : 'block';
+      } else {
+        t.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+  <section id="motivos" class="motivos">
+  <h2>💕 10 Things I Hate About You</h2>
+  <ul id="listaMotivos">
+    <li>Seu sorriso cintilante, eu odeio (sorria mais)</li>
+    <li>Sua determinação e insistência, eu odeio (continue assim)</li>
+    <li>Como você me faz chorar de rir, eu odeio (minha barriga dói, pare com essas brincadeiras gostosas)</li>
+    <li>Sua cara amassada quando acorda, eu odeio (quero olhar todos os dias)</li>
+    <li>Sua voz quando tá empolgado, que chega a mudar, eu odeio (não pare nunca de falar)</li>
+    <li>Você falando qualquer assunto nerd enquanto seus olhos se perdem, eu odeio (não consigo não me prender neles)</li>
+    <li>A maneira que você fica dramático, eu odeio (não me canso de cuidar)</li>
+    <li>O jeito que você me escreve para me distrair, eu odeio (fico boba)</li>
+    <li>Suas teorias do universo mirabolantes que eu não entendo, eu odeio (fica tão atraente)</li>
+    <li>Suas rimas de amor, eu odeio (me faz ter certeza da minha escolha)</li>
+    <li>eu odeio, eu odeio, eu odeio, eu odeio... (eu amo.)</li>
+  </ul>
+  </section>
+
+  <style>
+  .highlight-parente {
+    color: #ff69b4;
+    font-style: italic;
+    font-weight: bold;
+  }
+</style>
+
+<script>
+  // Destacar parênteses na lista de motivos
+  const lista = document.getElementById("listaMotivos");
+  lista.innerHTML = lista.innerHTML.replace(/\(([^)]+)\)/g, '<span class="highlight-parente">($1)</span>');
+</script>
+
+<section id="quiz">
+  <h2>❓ Quiz </h2>
+  <p style= "padding: 30px; text-align: center;"> Vamos ver se você lembra dessas coisinhas, hein! 💞</p>
+  <form id="quizForm"></form>
+  <button id="submitQuiz" class="btn-surpresa">Finalizar</button>
+  <div id="quizResult" style="margin-top: 20px; font-weight: bold;"></div>
+</section>
+
+<style>
+  #quiz {
+      background: rgba(255, 255, 255, 0.2); /* fundo branco transparente */
+  backdrop-filter: blur(10px); /* esse é o blur */
+  -webkit-backdrop-filter: blur(10px); /* suporte pra Safari */
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  color: #3b3b3b;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+   
+  }
+  .quiz-pergunta {
+    margin-bottom: 20px;
+    background: #ffeef5;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .quiz-pergunta h3 {
+    color: #880e4f;
+    margin-bottom: 10px;
+  }
+  .quiz-opcao {
+    display: block;
+    margin: 8px 0;
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .quiz-opcao:hover {
+    background-color: #ffe4ec;
+  }
+  input[type="radio"] {
+    margin-right: 8px;
+  }
+</style>
+
+<script>
+  const quizData = [
+    {
+      question: "Onde foi nosso primeiro encontro?",
+      options: ["No parque", "No cinema", "Na cafeteria"],
+      answer: 2
+    },
+    {
+      question: "Qual doce a gente mais cozinhou juntos",
+      options: ["Bolo", "Brigadeiro", "Doce de limão"],
+      answer: 1
+    },
+    {
+      question: "Qual nosso filme preferido juntos?",
+      options: ["O miranha", "Shrek", "Enola 2"],
+      answer: 2
+    },
+    {
+      question: "Qual música sempre lembra a gente?",
+      options: ["Burn", "Die with a smile", "Céu azul"],
+      answer: 0
+    },
+    {
+      question: "Qual nosso destino de viagem dos sonhos?",
+      options: ["Paris", "Maldivas", "Japão"],
+      answer: 2
+    },
+    {
+      question: "Qual o nome do nosso fih?",
+      options: ["Jake", "James", "Jungkook"],
+      answer: 0
+    },
+    {
+      question: "Qual nosso hobby favorito juntos?",
+      options: ["Cozinhar", "Assistir séries", "Andar de bicicleta"],
+      answer: 0
+    },
+    {
+      question: "Qual a cor que eu mais gosto em você?",
+      options: ["Azul", "Preto", "Vermelho"],
+      answer: 1
+    },
+    {
+      question: "Qual a data do nosso aniversário de namoro? (dia q compramos aliança)",
+      options: ["12 de Dezembro", "21 de Dezembro", "30 de Dezembro"],
+      answer: 2
+    },
+    {
+      question: "Qual presente você me deu que eu amei?",
+      options: ["Cartinhas", "Colagens", "Todos"],
+      answer: 2
+    }
+  ];
+
+  const quizForm = document.getElementById('quizForm');
+  const submitBtn = document.getElementById('submitQuiz');
+  const resultDiv = document.getElementById('quizResult');
+
+  // Montar o quiz
+  quizData.forEach((item, i) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.classList.add('quiz-pergunta');
+
+    const qTitle = document.createElement('h3');
+    qTitle.textContent = `${i + 1}. ${item.question}`;
+    questionDiv.appendChild(qTitle);
+
+    item.options.forEach((option, idx) => {
+      const label = document.createElement('label');
+      label.classList.add('quiz-opcao');
+
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = `question${i}`;
+      input.value = idx;
+
+      label.appendChild(input);
+      label.appendChild(document.createTextNode(option));
+      questionDiv.appendChild(label);
+    });
+
+    quizForm.appendChild(questionDiv);
+  });
+
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita recarregar a página
+
+    let score = 0;
+
+    quizData.forEach((currentQuestion, questionNumber) => {
+      const selector = `input[name=question${questionNumber}]:checked`;
+      const selectedOption = document.querySelector(selector);
+
+      if (selectedOption && parseInt(selectedOption.value) === currentQuestion.answer) {
+        score++;
+      }
+    });
+
+    resultDiv.textContent = `Você acertou ${score} de ${quizData.length} perguntas! 💖`;
+
+    // Mostrar respostas certas/erradas
+    quizData.forEach((currentQuestion, questionNumber) => {
+      const questionDiv = quizForm.children[questionNumber];
+      const radios = questionDiv.querySelectorAll('input[name=question' + questionNumber + ']');
+
+      radios.forEach((radio, idx) => {
+        const label = radio.parentElement;
+
+        // Reset
+        label.style.backgroundColor = '';
+        label.style.color = '';
+
+        if (parseInt(radio.value) === currentQuestion.answer) {
+          // Correta
+          label.style.backgroundColor = '#d4edda';
+          label.style.color = '#155724';
+        }
+
+        if (radio.checked && parseInt(radio.value) !== currentQuestion.answer) {
+          // Errada
+          label.style.backgroundColor = '#f8d7da';
+          label.style.color = '#721c24';
+        }
+      });
+    });
+  });
+</script>
+
+<section id="cartao">
+  <h2>💌</h2>
+  <button onclick="toggleCarta()" class="btn-surpresa">Abrir minha cartinha 💌</button>
+  <div id="carta">
+    <p>Meu amor... você é meu melhor presente. Te amo mais que cebolinha! 💖</p>
+  </div>
+</section>
+
+<style>
+  #cartao {
+    max-width: 320px;
+    margin: 50px auto; /* centraliza horizontal com espaço em cima */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center; /* centraliza o texto */
+    margin-top: 10%;
+       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .btn-surpresa {
+    cursor: pointer;
+    background-color: #c2185b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-surpresa:hover {
+    background-color: #a11549;
+  }
+
+  #carta {
+    margin-top: 15px;
+    background: #fff0f5;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+</style>
+
+<script>
+  function toggleCarta() {
+    const carta = document.getElementById('carta');
+    carta.style.display = carta.style.display === 'none' ? 'block' : 'none';
+  }
+  </script>
+
+  <section id="filmes" class="netflix-section">
+    <h2>🎬 Let's Watch Together</h2>
+    <p class="netflix-subtitle">Escolhe um pra ver comigo hoje! ❤️</p>
+    <div class="netflix-row">
+      <!-- Filme 1 -->
+      <div class="netflix-card" onclick="window.open('https://pobreflixtv.men/assistir-flow-dublado-online-45607/?area=online', '_blank')">
+        <div class="netflix-card-img">
+          <img src="img/2movie.png" alt="Flow" />
+          <div class="netflix-card-overlay">
+            <div class="netflix-play-icon">▶</div>
+          </div>
+        </div>
+        <div class="netflix-card-info">
+          <h3>Flow</h3>
+          <div class="netflix-card-meta">2023 • Drama • 1h 52m</div>
+        </div>
+      </div>
+
+      <!-- Filme 2 -->
+      <div class="netflix-card" onclick="window.open('https://www.justwatch.com/br/filme/ainda-estou-aqui', '_blank')">
+        <div class="netflix-card-img">
+          <img src="img/3movie.png" alt="Ainda Estou Aqui" />
+          <div class="netflix-card-overlay">
+            <div class="netflix-play-icon">▶</div>
+          </div>
+        </div>
+        <div class="netflix-card-info">
+          <h3>Ainda Estou Aqui</h3>
+          <div class="netflix-card-meta">2023 • Drama • 2h 15m</div>
+        </div>
+      </div>
+
+      <!-- Filme 3 -->
+      <div class="netflix-card" onclick="window.open('https://www.justwatch.com/br/filme/kraven-o-cacador', '_blank')">
+        <div class="netflix-card-img">
+          <img src="img/1movie.png" alt="Kraven" />
+          <div class="netflix-card-overlay">
+            <div class="netflix-play-icon">▶</div>
+          </div>
+        </div>
+        <div class="netflix-card-info">
+          <h3>Kraven</h3>
+          <div class="netflix-card-meta">2023 • Ação • 1h 58m</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  /* Estilo Netflix para a seção de filmes */
+  .netflix-section {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(20,20,20,0.5) 100%);
+    border-radius: 8px;
+    padding: 40px 20px;
+    margin: 50px auto;
+    max-width: 900px;
+    color: white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .netflix-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #E50914, transparent);
+  }
+  
+  .netflix-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  
+  .netflix-subtitle {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  .netflix-row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .netflix-row::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .netflix-card {
+    flex: 0 0 auto;
+    width: 240px;
+    background: rgba(20,20,20,0.8);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transform-origin: center bottom;
+    margin: 0 5px;
+  }
+  
+  .netflix-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    z-index: 10;
+  }
+  
+  .netflix-card-img {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+  }
+  
+  .netflix-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .netflix-card:hover .netflix-card-img img {
+    transform: scale(1.1);
+  }
+  
+  .netflix-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .netflix-card:hover .netflix-card-overlay {
+    opacity: 1;
+  }
+  
+  .netflix-play-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 20, 147, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.6);
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .netflix-card:hover .netflix-play-icon {
+    transform: scale(1);
+  }
+  
+  .netflix-card-info {
+    padding: 15px;
+  }
+  
+  .netflix-card-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .netflix-card-meta {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .netflix-section {
+      padding: 30px 15px;
+    }
+    
+    .netflix-card {
+      width: 220px;
+    }
+    
+    .netflix-card-img {
+      height: 130px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .netflix-card {
+      width: 180px;
+    }
+    
+    .netflix-card-img {
+      height: 110px;
+    }
+    
+    .netflix-card-info h3 {
+      font-size: 1rem;
+    }
+    
+    .netflix-card-meta {
+      font-size: 0.8rem;
+    }
+  }
+  </style>
+  
+<section id="musica">
+  <h2>🎵 Our song</h2>
+  <div id="player-musica" style="position: relative; display: inline-block;">
+    <audio id="audioPlayer" preload="auto" loop>
+      <source src="msc/burnmusic.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o áudio.
+    </audio>
+
+    <button id="btnPlayPause" aria-label="Play/Pause música" title="Ligar/Desligar música" class="music-btn">🔇</button>
+
+    <p class="youtube-text">
+      Ouça também no YouTube: 
+      <a href="#" id="youtubeLink" class="youtube-link">Ver vídeo da música</a>
+    </p>
+  </div>
+</section>
+
+<style>
+  /* Estilos para a seção de música */
+  #musica {
+    background: linear-gradient(135deg, rgba(255,192,203,0.25) 0%, rgba(255,182,193,0.35) 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 50px 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15), 
+                inset 0 2px 2px rgba(255,255,255,0.7);
+    border: 1px solid rgba(255,255,255,0.4);
+    max-width: 650px;
+    margin: 60px auto;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #musica::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.4;
+    animation: musicGradient 15s ease infinite;
+    border-radius: 30px;
+    transition: opacity 0.5s;
+  }
+  
+  @keyframes musicGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  #musica:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2), 
+                inset 0 2px 2px rgba(255,255,255,0.7);
+  }
+  
+  #musica:hover::before {
+    opacity: 0.6;
+    filter: blur(15px);
+  }
+  
+  #musica h2 {
+    font-size: 2.4rem;
+    background: linear-gradient(to right, #C71585, #FF1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+  }
+  
+  #musica h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #C71585, #FF1493);
+    border-radius: 3px;
+  }
+  
+  .music-btn {
+    background: linear-gradient(135deg, #FFC0CB 0%, #FF69B4 100%);
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 8px 20px rgba(199, 21, 133, 0.6),
+                inset 0 2px 3px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    font-size: 36px;
+    color: #8B008B;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    animation: floatButton 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatButton {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .music-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.75s;
+  }
+  
+  .music-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+  }
+  
+  .music-btn:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(199, 21, 133, 0.8),
+                0 5px 15px rgba(255, 20, 147, 0.4),
+                inset 0 2px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .music-btn:hover::before {
+    left: 100%;
+    transition: all 0.75s;
+  }
+  
+  .music-btn:hover::after {
+    opacity: 0.4;
+  }
+  
+  .music-btn:active {
+    transform: scale(0.9);
+  }
+  
+  .youtube-text {
+    font-size: 1.4rem;
+    color: #C71585;
+    margin-top: 25px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .youtube-text::before, .youtube-text::after {
+    content: '♫';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+  }
+  
+  .youtube-text::before {
+    left: -25px;
+  }
+  
+  .youtube-text::after {
+    right: -25px;
+  }
+  
+  .youtube-link {
+    color: #DB7093;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.4s;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  
+  .youtube-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+      rgba(255,255,255,0) 0%, 
+      rgba(255,255,255,0.4) 50%, 
+      rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.75s;
+  }
+  
+  .youtube-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #FF1493, #FF69B4, #FF1493);
+    background-size: 200% 100%;
+    animation: gradientMove 2s linear infinite;
+  }
+  
+  @keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+  }
+  
+  .youtube-link:hover {
+    color: #FF1493;
+    text-shadow: 0 0 8px rgba(255,105,180,0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(219, 112, 147, 0.4);
+  }
+  
+  .youtube-link:hover::before {
+    left: 100%;
+    transition: all 0.75s;
+  }
+  
+  .youtube-link:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 8px rgba(219, 112, 147, 0.3);
+  }
+  
+  /* Animação pulse rosa */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.8);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 30px 15px rgba(255, 105, 180, 0);
+      transform: scale(1.12);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 105, 180, 0);
+      transform: scale(1);
+    }
+  }
+
+  .playing {
+    animation: pulse 2s infinite;
+    background: linear-gradient(135deg, #FF69B4 0%, #FF1493 100%) !important;
+    color: #FFF0F5 !important;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.9),
+                0 0 60px rgba(255, 20, 147, 0.5) !important;
+    position: relative;
+  }
+  
+  .playing::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+    animation: musicGradient 8s ease infinite;
+  }
+  
+  .playing::after {
+    content: '♫';
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background: #FF1493;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bounce 1s infinite alternate;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.7);
+  }
+  
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+  }
+  
+  .youtube-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: modalFadeIn 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    backdrop-filter: blur(12px);
+  }
+  
+  @keyframes modalFadeIn {
+    0% { opacity: 0; backdrop-filter: blur(0px); }
+    100% { opacity: 1; backdrop-filter: blur(12px); }
+  }
+  
+  .youtube-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    animation: modalScaleIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center;
+  }
+  
+  @keyframes modalScaleIn {
+    0% { transform: scale(0.7); opacity: 0; }
+    40% { opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .youtube-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #7fffd4, #ff0080);
+    background-size: 400% 400%;
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.8;
+    animation: gradientBorder 8s ease infinite;
+  }
+  
+  @keyframes gradientBorder {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 60px rgba(255, 105, 180, 0.7), 
+                0 0 120px rgba(255, 20, 145, 0.4),
+                0 0 5px rgba(255, 255, 255, 0.8);
+    animation: pulseGlow 3s infinite alternate;
+  }
+  
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 60px rgba(255, 105, 180, 0.7), 
+                     0 0 120px rgba(255, 20, 145, 0.4),
+                     0 0 5px rgba(255, 255, 255, 0.8); }
+    100% { box-shadow: 0 0 80px rgba(255, 105, 180, 0.9), 
+                       0 0 160px rgba(255, 20, 145, 0.6),
+                       0 0 10px rgba(255, 255, 255, 1); }
+  }
+  
+  .close-youtube {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    background: linear-gradient(135deg, #ff0080 0%, #7928ca 100%);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 
+                0 0 40px rgba(255, 105, 180, 0.4),
+                inset 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1001;
+    overflow: hidden;
+  }
+  
+  .close-youtube::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: rotate(45deg);
+  }
+  
+  .close-youtube:hover {
+    background: linear-gradient(135deg, #ff0080 0%, #ff8c00 100%);
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.8),
+                0 0 60px rgba(255, 0, 128, 0.4),
+                inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  
+  .close-youtube:hover::before {
+    opacity: 0.4;
+    animation: shine 1.5s infinite;
+  }
+  
+  @keyframes shine {
+    0% { transform: rotate(45deg) translateY(0); opacity: 0; }
+    50% { opacity: 0.7; }
+    100% { transform: rotate(45deg) translateY(200%); opacity: 0; }
+  }
+  
+  .close-youtube:active {
+    transform: scale(0.9);
+    background: linear-gradient(135deg, #7928ca 0%, #ff0080 100%);
+  }
+  
+  /* Estilos adicionais para o botão de música pausado */
+  .paused {
+    background: linear-gradient(135deg, #FFC0CB 0%, #FFB6C1 100%);
+    color: #8B008B;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .paused::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #FFC0CB, #FFB6C1);
+    z-index: -1;
+    filter: blur(5px);
+    opacity: 0.5;
+  }
+  
+  /* Efeitos de partículas musicais */
+  @keyframes floatParticle {
+    0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) rotate(var(--r)); opacity: 0; }
+  }
+  
+  .music-particle {
+    position: absolute;
+    font-size: 20px;
+    color: #FF1493;
+    pointer-events: none;
+    z-index: 9999;
+    animation: floatParticle 2s forwards;
+  }
+</style>
+
+<script>
+  const audio = document.getElementById('audioPlayer');
+  const btn = document.getElementById('btnPlayPause');
+  const youtubeLink = document.getElementById('youtubeLink');
+
+  // Corrigir o problema de reprodução
+  audio.volume = 0.2;
+  
+  // Garantir que o áudio seja carregado
+  audio.load();
+
+  function updateBtnIcon() {
+    if (audio.paused) {
+      btn.innerHTML = '🎵';
+      btn.classList.remove('playing');
+      btn.classList.add('paused');
+    } else {
+      btn.innerHTML = '🎧';
+      btn.classList.remove('paused');
+      btn.classList.add('playing');
+    }
+  }
+
+  // Função para criar partículas musicais
+  function createMusicParticles(x, y) {
+    const particles = ['♫', '♪', '♬', '♩', '🎵', '🎶'];
+    const container = document.querySelector('#player-musica');
+    
+    for (let i = 0; i < 8; i++) {
+      const particle = document.createElement('span');
+      particle.className = 'music-particle';
+      particle.textContent = particles[Math.floor(Math.random() * particles.length)];
+      particle.style.left = x + 'px';
+      particle.style.top = y + 'px';
+      
+      // Valores aleatórios para animação
+      particle.style.setProperty('--tx', (Math.random() * 100 - 50) + 'px');
+      particle.style.setProperty('--ty', (Math.random() * -100 - 20) + 'px');
+      particle.style.setProperty('--r', (Math.random() * 360) + 'deg');
+      
+      container.appendChild(particle);
+      
+      // Remover partícula após a animação
+      setTimeout(() => {
+        particle.remove();
+      }, 2000);
+    }
+  }
+  
+  btn.addEventListener('click', (e) => {
+    if (audio.paused) {
+      // Usar uma Promise para garantir que o play funcione
+      const playPromise = audio.play();
+      
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Reprodução iniciada com sucesso
+            updateBtnIcon();
+            
+            // Criar efeito de partículas
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            createMusicParticles(x, y);
+          })
+          .catch(error => {
+            // Erro na reprodução
+            console.error("Erro ao reproduzir áudio:", error);
+            alert("Não foi possível reproduzir o áudio. Tente clicar novamente.");
+          });
+      }
+    } else {
+      audio.pause();
+      updateBtnIcon();
+    }
+  });
+  
+  // Adicionar evento para o link do YouTube
+  youtubeLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // Pausar o áudio se estiver tocando
+    if (!audio.paused) {
+      audio.pause();
+      updateBtnIcon();
+    }
+    
+    // Criar o modal do YouTube
+    const modal = document.createElement('div');
+    modal.className = 'youtube-modal';
+    
+    // URL do vídeo do YouTube - Burn do Kanye West
+    const youtubeURL = "https://www.youtube.com/embed/4xhEh4ceyz8?autoplay=1";
+    
+    modal.innerHTML = `
+      <div class="youtube-container">
+        <iframe src="${youtubeURL}" title="YouTube video player" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen></iframe>
+        <button class="close-youtube">✕</button>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Adicionar evento para fechar o modal
+    document.querySelector('.close-youtube').addEventListener('click', function() {
+      modal.remove();
+    });
+    
+    // Fechar o modal ao clicar fora do vídeo
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.remove();
+      }
+    });
+  });
+
+  window.addEventListener('load', updateBtnIcon);
+</script>
+
+
+  <section id="surpresa">
+    <h2>🎁 A surprise</h2>
+    <p>Aaah será que você acha? 👀</p>
+    
+    <div id="surpresa-botao">
+      <button id="botao-ver-surpresa">💖 Ver surpresa</button>
+    </div>
+  </section>
+
+  <button class="heart-reveal" onclick="mostrarSurpresa()">❤️</button>
+
+  <script>
+    function mostrarSurpresa() {
+      const botao = document.getElementById('surpresa-botao');
+      // Alternar entre mostrar e esconder a surpresa
+      if (botao.style.opacity === '1') {
+        botao.style.opacity = '0';
+        botao.style.pointerEvents = 'none';
+      } else {
+        botao.style.opacity = '1';
+        botao.style.pointerEvents = 'auto';
+      }
+    }
+    
+    function abrirModalSenha() {
+      const modal = document.createElement('div');
+      modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 2000;';
+      
+      modal.innerHTML = '<div style="background: white; padding: 30px; border-radius: 15px; text-align: center; width: 350px;"><h3 style="color: #c2185b;">💖 Digite a senha</h3><input type="password" id="senhaInput" placeholder="Senha..." style="width: 100%; padding: 10px; margin: 15px 0; border: 2px solid #f8bbd0; border-radius: 8px; text-align: center;"><div><button onclick="verificarSenha()" style="background: #c2185b; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 8px; cursor: pointer;">Confirmar</button><button onclick="document.body.removeChild(this.closest(\'div[style*=\\\"position: fixed\\\"]\'))" style="background: #f1f1f1; color: #333; border: none; padding: 10px 20px; margin: 5px; border-radius: 8px; cursor: pointer;">Cancelar</button></div><p style="margin-top: 15px; font-size: 0.8em; color: #888;">Dica: Data do nosso primeiro beijo (formato: ddmmaa)</p></div>';
+      
+      document.body.appendChild(modal);
+      document.getElementById('senhaInput').focus();
+    }
+
+    function verificarSenha() {
+      const senha = document.getElementById('senhaInput').value;
+      if (senha === '161023') {
+        document.querySelector('div[style*="position: fixed"]').remove();
+        window.open('surprise.gif', '_blank');
+      } else {
+        alert('Senha incorreta!');
+      }
+    }
+
+    // Event listeners configurados no DOMContentLoaded
+  </script>
+  
+  <style>
+       #surpresa {
+      width: 280px; 
+      height: 280px; 
+      margin: 40px auto; 
+      background: linear-gradient(135deg, rgba(255, 230, 240, 0.9) 0%, rgba(255, 200, 220, 0.9) 100%); 
+      border-radius: 50%; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      position: relative; 
+      box-shadow: 0 10px 25px rgba(194, 24, 91, 0.3); 
+      overflow: hidden;
+    }
+    
+    #surpresa h2 {
+      font-size: 1.5em; 
+      margin: 0 0 10px 0; 
+      padding: 0; 
+      color: #c2185b; 
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+    }
+    
+    #surpresa p {
+      font-size: 1em; 
+      margin: 0 0 10px 0; 
+      padding: 0; 
+      color: #880e4f;
+    }
+    
+    #surpresa-botao {
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      opacity: 0; 
+      pointer-events: none; 
+      background: rgba(255, 255, 255, 0.3); 
+      backdrop-filter: blur(5px); 
+      border-radius: 50%;
+      z-index: 1001;
+      transition: all 0.5s ease;
+    }
+    
+    #botao-ver-surpresa {
+      background-color: #c2185b;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    
+    .heart-reveal {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1002;
+      padding: 15px;
+      font-size: 40px;
+    }
+  </style>
+
+ 
+
+  
+    <section id="dias-juntos">
+  <h2>💕 Dias juntos <span class="parenteses"><br>(que nos conhecemos❤️)</span></h2>
+  <div id="contador"></div>
+</section>
+
+<style>
+  #dias-juntos {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #ffeef5;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(194, 24, 91, 0.2);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c2185b;
+  }
+
+  #dias-juntos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px #f4c2d7;
+  }
+
+  .parenteses {
+  font-size: 0.6em;   /* 60% do tamanho do texto do h2 */
+  color: #c2185b;     /* cor opcional pra combinar */
+  font-weight: normal; /* deixar mais leve se quiser */
+  margin-left: 5px;    /* um espacinho antes do parênteses */
+}
+
+  #contador {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    background: linear-gradient(135deg, #f78ca0 0%, #f9748f 100%);
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+    cursor: default;
+  }
+
+  #contador:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+  const dataInicio = new Date(2023, 10, 12, 0, 0, 0);
+
+  function atualizarContador() {
+    const agora = new Date();
+    const diff = agora - dataInicio;
+
+    const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutos = Math.floor((diff / (1000 * 60)) % 60);
+    const segundos = Math.floor((diff / 1000) % 60);
+
+    const contador = document.getElementById('contador');
+    contador.textContent = `${dias} dias, ${horas}h ${minutos}m ${segundos}s`;
+  }
+
+  setInterval(atualizarContador, 1000);
+  atualizarContador();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const botaoSurpresa = document.getElementById('surpresa-botao');
+    if (botaoSurpresa) {
+      botaoSurpresa.style.opacity = '0';
+      botaoSurpresa.style.pointerEvents = 'none';
+    }
+    
+    const verSurpresaButton = document.getElementById('botao-ver-surpresa');
+    if (verSurpresaButton) {
+      verSurpresaButton.onclick = abrirModalSenha;
+    }
+  });
+</script>
+
+</body>
+
+<footer class="rodape">
+  <p>Feito com 💖 por nós dois – Feliz Dia dos Namorados!</p>
+</footer>
+
+<style>
+
+
+/* Estilos gerais melhorados */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('version3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  line-height: 1.6;
+  color: #333;
+  font-size: 18px; /* Tamanho base de fonte aumentado */
+}
+
+/* Header melhorado */
+header {
+  background: linear-gradient(135deg, #ffcbdb 0%, #fce4ec 100%);
+  padding: 35px 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+header h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5em;
+  color: #880e4f;
+  text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+/* Navegação melhorada */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(252, 228, 236, 0.9);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #880e4f;
+  font-weight: bold;
+  font-size: 1.05em;
+  transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #c2185b;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(194, 24, 91, 0.3);
+}
+
+/* Seções melhoradas */
+section {
+  padding: 60px 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #ad1457;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #f8bbd0, #c2185b, #f8bbd0);
+  border-radius: 3px;
+}
+
+/* Cartinha melhorada */
+#cartinha {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 40px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 650px;
+  color: #3b3b3b;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  line-height: 1.8;
+  font-size: 1.15em;
+}
+
+#cartinha p {
+  font-size: 1.2em;
+  text-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+/* Botões melhorados */
+.btn-surpresa {
+  background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
+  color: white;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 6px 15px rgba(194, 24, 91, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.btn-surpresa:hover {
+  background: linear-gradient(135deg, #ad1457 0%, #790e43 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.6);
+}
+
+.btn-surpresa:active {
+  transform: translateY(1px);
+}
+
+/* Presente melhorado */
+#presente {
+  display: none;
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #880e4f;
+  background-color: rgba(255, 230, 240, 0.8);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.5s;
+  font-weight: 500;
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#presente a {
+  color: #c2185b;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-bottom: 2px dotted #c2185b;
+  padding-bottom: 2px;
+}
+
+#presente a:hover {
+  color: #880e4f;
+  border-bottom: 2px solid #880e4f;
+}
+
+/* Botão escondido melhorado */
+.hidden-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.hidden-button img {
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+  transition: all 0.3s;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,0.2));
+}
+
+.hidden-button img:hover {
+  opacity: 1;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Estilos para o modal de senha */
+.senha-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.senha-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 90%;
+  width: 350px;
+}
+
+.senha-container h3 {
+  margin-bottom: 20px;
+  color: #c2185b;
+}
+
+#senhaInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #f8bbd0;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+#senhaInput.erro {
+  animation: shake 0.5s;
+  border-color: #ff0000;
+}
+
+.senha-botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-senha {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.confirmar {
+  background-color: #c2185b;
+  color: white;
+}
+
+.confirmar:hover {
+  background-color: #ad1457;
+}
+
+.cancelar {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.cancelar:hover {
+  background-color: #e0e0e0;
+}
+
+.senha-dica {
+  margin-top: 15px;
+  font-size: 0.8em;
+  color: #888;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.hidden-button img:hover {
+  opacity: 1;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Linha do tempo e motivos melhorados */
+.linha-do-tempo li, .motivos li {
+  margin-bottom: 15px;
+  background-color: rgba(255, 238, 245, 0.8);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #c2185b;
+  transition: all 0.3s;
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.linha-do-tempo li:hover, .motivos li:hover {
+  background-color: rgba(255, 220, 230, 0.9);
+  transform: translateX(5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.texto-explicativo {
+  font-size: 1.1em !important;
+  line-height: 1.7;
+  color: #333;
+  text-shadow: 0 0 1px rgba(255,255,255,0.5);
+}
+
+/* Filmes grid melhorado */
+.filmes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.filme {
+  background-color: rgba(255, 240, 245, 0.8);
+  border-radius: 15px;
+  padding: 15px;
+  width: 270px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.filme:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.filme img {
+  width: 100%;
+  border-radius: 10px;
+  transition: all 0.4s;
+  transform: scale(0.98);
+}
+
+.filme:hover img {
+  transform: scale(1);
+}
+
+.filme p {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Rodapé melhorado */
+.rodape {
+  background: linear-gradient(135deg, #ffeef5 0%, #fce4ec 100%);
+  color: #c2185b;
+  text-align: center;
+  padding: 25px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.1em;
+  border-top: 3px dashed #f8bbd0;
+  margin-top: 70px;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.surpresa {
+  width: 300px !important;
+  height: 300px !important;
+  margin: 30px auto !important;
+  padding: 20px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: hidden !important;
+}
+
+.surpresa h2 {
+  font-size: 1.5em !important;
+  margin-bottom: 10px !important;
+}
+
+.surpresa p {
+  font-size: 0.9em !important;
+  margin-bottom: 10px !important;
+}
+
+/* Animações gerais */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+h2 {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  
+  header h1 {
+    font-size: 2.8em;
+  }
+  
+  section {
+    padding: 40px 20px;
+  }
+  
+  #cartinha {
+    padding: 30px 20px;
+  }
+  
+  .filme {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .linha-do-tempo li, .motivos li, .texto-explicativo {
+    font-size: 1.1em;
+  }
+}
+
+/* Melhorias gerais de legibilidade */
+p, li, .texto-explicativo, .quiz-opcao, .quiz-pergunta {
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+}
+
+.quiz-pergunta h3 {
+  font-size: 1.2em;
+}
+
+.quiz-opcao {
+  font-size: 1.1em;
+}
+
+/* Estilos para os corações flutuantes */
+#floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 24px;
+  animation: floatUpwards 15s linear forwards;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+  transform-origin: center;
+}
+
+@keyframes floatUpwards {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(0.7);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(var(--tx)) rotate(var(--r)) scale(1.2);
+    opacity: 0;
+  }
+}
+</style>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Configurar o botão de surpresa
+  const botaoSurpresa = document.getElementById('surpresa-botao');
+  if (botaoSurpresa) {
+    console.log("Inicializando botão de surpresa");
+    botaoSurpresa.style.opacity = '0';
+    botaoSurpresa.style.pointerEvents = 'none';
+  }
+  
+  // Configurar o botão do coração
+  const botaoCoracao = document.querySelector('.heart-reveal');
+  if (botaoCoracao) {
+    console.log("Configurando botão do coração");
+    botaoCoracao.addEventListener('click', function() {
+      console.log("Coração clicado");
+      toggleSurpresa();
+    });
+  }
+  
+  // Chuva de castores
+  criarChuvaDeCapivaras();
+  
+  // Popup de boas-vindas
+  setTimeout(function() {
+    const bemVindoModal = document.createElement('div');
+    bemVindoModal.className = 'bem-vindo-modal';
+    
+    // Verificar se o tema escuro está ativo
+    const isDarkTheme = document.body.classList.contains('dark-theme');
+    
+    bemVindoModal.innerHTML = `
+      <div class="bem-vindo-container">
+        <div class="bem-vindo-header">
+          <h2>💖 Bem-vindo(a) ao nosso cantinho! 💖</h2>
+          <button id="fecharBemVindo" class="fechar-bem-vindo">&times;</button>
+        </div>
+        <div class="bem-vindo-conteudo">
+          <p class="bem-vindo-texto">Olá meu amor! Este site foi feito com muito carinho especialmente para você!</p>
+          <p class="bem-vindo-texto">Aqui você vai encontrar memórias, surpresas e todo o meu amor por você.</p>
+          <div class="bem-vindo-coracao">❤️</div>
+        </div>
+        <button id="continuarBemVindo" class="btn-bem-vindo">Continuar</button>
+      </div>
+    `;
+    
+    document.body.appendChild(bemVindoModal);
+    
+    // Animar entrada
+    setTimeout(() => {
+      document.querySelector('.bem-vindo-container').classList.add('mostrar');
+    }, 100);
+    
+    // Fechar popup
+    document.getElementById('fecharBemVindo').addEventListener('click', function() {
+      fecharPopupBemVindo();
+    });
+    
+    // Botão continuar
+    document.getElementById('continuarBemVindo').addEventListener('click', function() {
+      fecharPopupBemVindo();
+    });
+    
+    // Função para fechar com animação
+    function fecharPopupBemVindo() {
+      const container = document.querySelector('.bem-vindo-container');
+      container.classList.remove('mostrar');
+      container.classList.add('esconder');
+      
+      setTimeout(() => {
+        bemVindoModal.remove();
+      }, 500);
+    }
+    
+    // Fechar ao clicar fora
+    bemVindoModal.addEventListener('click', function(e) {
+      if (e.target === bemVindoModal) {
+        fecharPopupBemVindo();
+      }
+    });
+  }, 800); // Atraso para mostrar o popup
+  
+  // Função para criar a chuva de castores
+  function criarChuvaDeCapivaras() {
+    const chuvaContainer = document.createElement('div');
+    chuvaContainer.className = 'chuva-capivaras';
+    document.body.appendChild(chuvaContainer);
+    
+    // Criar 20 capivaras
+    for (let i = 0; i < 20; i++) {
+      setTimeout(() => {
+        const castor = document.createElement('div');
+        castor.className = 'capivara';
+        castor.innerHTML = '🦫';
+        castor.style.left = Math.random() * 100 + 'vw';
+        castor.style.animationDuration = (Math.random() * 2 + 1) + 's';
+        chuvaContainer.appendChild(castor);
+      }, Math.random() * 500);
+    }
+    
+    // Remover a chuva após 3 segundos
+    setTimeout(() => {
+      chuvaContainer.classList.add('remover');
+      setTimeout(() => {
+        chuvaContainer.remove();
+      }, 500);
+    }, 3000);
+  }
+
+  // Código original do modal de senha
+  document.addEventListener('click', function(e) {
+    const target = e.target;
+    const link = target.tagName === 'A' ? target : target.closest('a');
+    
+    if (link && link.href && link.href.includes('surprise.gif')) {
+      e.preventDefault();
+      
+      // Criar o modal personalizado
+      const modal = document.createElement('div');
+      modal.className = 'senha-modal';
+      
+      modal.innerHTML = `
+        <div class="senha-container">
+          <h3>💖 Digite a senha</h3>
+          <input type="password" id="senhaInput" placeholder="Senha..." autofocus>
+          <div class="senha-botoes">
+            <button id="confirmarSenha" class="btn-senha confirmar">Confirmar</button>
+            <button id="cancelarSenha" class="btn-senha cancelar">Cancelar</button>
+          </div>
+          <p class="senha-dica">Dica: Data do nosso primeiro beijo (formato: ddmmaa)</p>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      
+      // Focar no input
+      setTimeout(() => document.getElementById('senhaInput').focus(), 100);
+      
+      // Confirmar senha
+      document.getElementById('confirmarSenha').addEventListener('click', function() {
+        const senha = document.getElementById('senhaInput').value;
+        if (senha === '161023') {
+          modal.remove();
+          window.open(link.href, '_blank');
+        } else {
+          document.getElementById('senhaInput').classList.add('erro');
+          setTimeout(() => document.getElementById('senhaInput').classList.remove('erro'), 500);
+        }
+      });
+      
+      // Cancelar
+      document.getElementById('cancelarSenha').addEventListener('click', function() {
+        modal.remove();
+      });
+      
+      // Enter para confirmar
+      document.getElementById('senhaInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          document.getElementById('confirmarSenha').click();
+        }
+      });
+    }
+  });
+});
+</script>
+
+<style>
+/* Estilos da chuva de castores */
+.chuva-capivaras {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.capivara {
+  position: absolute;
+  top: -50px;
+  font-size: 40px;
+  animation: cair 3s linear forwards;
+}
+
+@keyframes cair {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.chuva-capivaras.remover {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Estilos do popup de boas-vindas */
+.bem-vindo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.bem-vindo-container {
+  background: linear-gradient(135deg, #fff0f5 0%, #fce4ec 100%);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(194, 24, 91, 0.6);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 3px solid #f8bbd0;
+  position: relative;
+}
+
+/* Tema escuro para o modal de boas-vindas */
+.dark-theme .bem-vindo-container {
+  background: linear-gradient(135deg, #4a0d2b 0%, #2c0a1a 100%);
+  border: 3px solid #7d1642;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.bem-vindo-container.mostrar {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.bem-vindo-container.esconder {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+.bem-vindo-header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.bem-vindo-header h2 {
+  color: #c2185b;
+  font-size: 1.8em;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  animation: pulse 2s infinite;
+}
+
+/* Tema escuro para o título */
+.dark-theme .bem-vindo-header h2 {
+  color: #ff6b9d;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.fechar-bem-vindo {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c2185b;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  line-height: 0.8;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.fechar-bem-vindo:hover {
+  background-color: #ad1457;
+  transform: scale(1.1);
+}
+
+.bem-vindo-conteudo {
+  margin-bottom: 25px;
+}
+
+.bem-vindo-texto {
+  color: #880e4f;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Tema escuro para o texto */
+.dark-theme .bem-vindo-texto {
+  color: #f0f0f0;
+}
+
+.bem-vindo-coracao {
+  font-size: 3em;
+  margin: 15px 0;
+  animation: float 2s ease-in-out infinite;
+}
+
+.btn-bem-vindo {
+  background: linear-gradient(135deg, #c2185b 0%, #880e4f 100%);
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 5px 15px rgba(194, 24, 91, 0.4);
+}
+
+/* Tema escuro para o botão */
+.dark-theme .btn-bem-vindo {
+  background: linear-gradient(135deg, #ff4081 0%, #c51162 100%);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-bem-vindo:hover {
+  background: linear-gradient(135deg, #ad1457 0%, #790e43 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.6);
+}
+
+/* Tema escuro para o hover do botão */
+.dark-theme .btn-bem-vindo:hover {
+  background: linear-gradient(135deg, #ff5c95 0%, #d81b60 100%);
+  box-shadow: 0 8px 20px rgba(255, 64, 129, 0.4);
+}
+
+.btn-bem-vindo:active {
+  transform: translateY(1px);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Estilos originais do modal de senha */
+.senha-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.senha-container {
+  background-color: var(--card-bg, #fff0f5);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(194, 24, 91, 0.4);
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+}
+
+/* Tema escuro para o modal de senha */
+.dark-theme .senha-container {
+  background-color: rgba(60, 20, 40, 0.8);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.senha-container h3 {
+  color: #c2185b;
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+/* Tema escuro para o título do modal de senha */
+.dark-theme .senha-container h3 {
+  color: #ff6b9d;
+}
+
+#senhaInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #f8bbd0;
+  border-radius: 30px;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s;
+}
+
+/* Tema escuro para o input de senha */
+.dark-theme #senhaInput {
+  background-color: rgba(30, 10, 20, 0.6);
+  border: 2px solid #7d1642;
+  color: #f0f0f0;
+}
+
+#senhaInput:focus {
+  border-color: #c2185b;
+  box-shadow: 0 0 8px rgba(194, 24, 91, 0.3);
+}
+
+/* Tema escuro para o input de senha com foco */
+.dark-theme #senhaInput:focus {
+  border-color: #ff4081;
+  box-shadow: 0 0 8px rgba(255, 64, 129, 0.5);
+}
+
+.senha-botoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn-senha {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.confirmar {
+  background-color: #c2185b;
+  color: white;
+}
+
+/* Tema escuro para o botão confirmar */
+.dark-theme .confirmar {
+  background-color: #ff4081;
+  box-shadow: 0 2px 8px rgba(255, 64, 129, 0.4);
+}
+
+.confirmar:hover {
+  background-color: #ad1457;
+  transform: translateY(-2px);
+}
+
+/* Tema escuro para o hover do botão confirmar */
+.dark-theme .confirmar:hover {
+  background-color: #ff5c95;
+  box-shadow: 0 4px 12px rgba(255, 64, 129, 0.6);
+}
+
+.cancelar {
+  background-color: #f8bbd0;
+  color: #880e4f;
+}
+
+/* Tema escuro para o botão cancelar */
+.dark-theme .cancelar {
+  background-color: #4a0d2b;
+  color: #f0f0f0;
+  border: 1px solid #7d1642;
+}
+
+.cancelar:hover {
+  background-color: #f48fb1;
+  transform: translateY(-2px);
+}
+
+/* Tema escuro para o hover do botão cancelar */
+.dark-theme .cancelar:hover {
+  background-color: #5a1535;
+  transform: translateY(-2px);
+}
+
+.senha-dica {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: #ad1457;
+  font-style: italic;
+}
+
+/* Tema escuro para a dica de senha */
+.dark-theme .senha-dica {
+  color: #ff8fb0;
+}
+
+#senhaInput.erro {
+  border-color: #f44336;
+  animation: shake 0.5s;
+}
+
+/* Tema escuro para o input com erro */
+.dark-theme #senhaInput.erro {
+  border-color: #ff1744;
+  box-shadow: 0 0 8px rgba(255, 23, 68, 0.5);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+</style>
+
+
+</html>
+<style>
+.heart-reveal {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #ff69b4, #ff1493) !important;
+  border: none;
+  cursor: pointer;
+  z-index: 1002;
+  padding: 15px;
+  font-size: 40px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+  animation: heartBeat 2s infinite;
+}
+
+.heart-reveal:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 30px rgba(255, 20, 147, 0.6);
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+</style>
+<style>
+/* Modal de senha melhorado */
+.modal-senha-melhorado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(194, 24, 91, 0.8), rgba(136, 14, 79, 0.9));
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: modalFadeIn 0.5s ease;
+}
+
+.modal-container-melhorado {
+  background: linear-gradient(135deg, #fff0f5, #fce4ec);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+              0 0 0 1px rgba(255, 255, 255, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  transform: scale(0.8);
+  animation: modalScaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-container-melhorado::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+.modal-titulo-melhorado {
+  color: #c2185b;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+.modal-input-melhorado {
+  width: 100%;
+  padding: 15px 20px;
+  border: 3px solid #f8bbd0;
+  border-radius: 50px;
+  font-size: 1.2em;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 20px;
+}
+
+.modal-input-melhorado:focus {
+  border-color: #c2185b;
+  box-shadow: 0 0 20px rgba(194, 24, 91, 0.3);
+  transform: scale(1.02);
+}
+
+.modal-botoes-melhorado {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.modal-btn-melhorado {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-btn-confirmar {
+  background: linear-gradient(135deg, #c2185b, #880e4f);
+  color: white;
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.4);
+}
+
+.modal-btn-confirmar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(194, 24, 91, 0.6);
+}
+
+.modal-btn-cancelar {
+  background: linear-gradient(135deg, #f8bbd0, #f48fb1);
+  color: #880e4f;
+  box-shadow: 0 8px 20px rgba(248, 187, 208, 0.4);
+}
+
+.modal-btn-cancelar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(248, 187, 208, 0.6);
+}
+
+.modal-dica-melhorada {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #ad1457;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modalScaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+</style>
+<script>
+function abrirModalSenhaMelhorado() {
+  const modal = document.createElement('div');
+  modal.className = 'modal-senha-melhorado';
+  
+  modal.innerHTML = `
+    <div class="modal-container-melhorado">
+      <h3 class="modal-titulo-melhorado">💖 Digite a senha</h3>
+      <input type="password" class="modal-input-melhorado" id="senhaInputMelhorado" placeholder="Senha..." autofocus>
+      <div class="modal-botoes-melhorado">
+        <button class="modal-btn-melhorado modal-btn-confirmar" onclick="verificarSenhaMelhorada()">Confirmar</button>
+        <button class="modal-btn-melhorado modal-btn-cancelar" onclick="fecharModalMelhorado()">Cancelar</button>
+      </div>
+      <p class="modal-dica-melhorada">💡 Dica: Data do nosso primeiro beijo (formato: ddmmaa)</p>
+    </div>
+  `;
+  
+  document.body.appendChild(modal);
+  setTimeout(() => document.getElementById('senhaInputMelhorado').focus(), 100);
+  
+  // Enter para confirmar
+  document.getElementById('senhaInputMelhorado').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') verificarSenhaMelhorada();
+  });
+}
+
+function verificarSenhaMelhorada() {
+  const senha = document.getElementById('senhaInputMelhorado').value;
+  if (senha === '161023') {
+    fecharModalMelhorado();
+    window.open('surprise.gif', '_blank');
+  } else {
+    const input = document.getElementById('senhaInputMelhorado');
+    input.style.animation = 'shake 0.5s';
+    input.style.borderColor = '#ff1744';
+    setTimeout(() => {
+      input.style.animation = '';
+      input.style.borderColor = '#f8bbd0';
+    }, 500);
+  }
+}
+
+function fecharModalMelhorado() {
+  const modal = document.querySelector('.modal-senha-melhorado');
+  if (modal) modal.remove();
+}
+
+// Atualizar a função original para usar o novo modal
+function abrirModalSenha() {
+  abrirModalSenhaMelhorado();
+}
+</script>
+<style>
+/* Seção de música compacta e bonita */
+#musica {
+  background: linear-gradient(135deg, rgba(255,192,203,0.25) 0%, rgba(255,182,193,0.35) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(194, 24, 91, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+#musica h2 {
+  font-size: 1.8rem;
+  color: #c2185b;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#player-musica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.music-btn {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 20, 147, 0.4);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.6);
+}
+
+.youtube-text {
+  font-size: 1rem;
+  color: #c2185b;
+  margin: 0;
+}
+
+.youtube-link {
+  color: #ff1493;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.youtube-link:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+</style>

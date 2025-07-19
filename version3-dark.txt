@@ -1,0 +1,14 @@
+Para criar uma versão escura da imagem de fundo:
+
+1. Abra a imagem "version3.png" em um editor de imagem como Photoshop, GIMP, ou uma ferramenta online como Photopea.com
+
+2. Aplique os seguintes ajustes:
+   - Diminua o brilho em 40-50%
+   - Aumente o contraste em 10-20%
+   - Reduza a saturação em 20-30%
+   - Adicione um tom azulado escuro ou roxo suave
+   - Opcionalmente, adicione um pouco de granulação para um efeito noturno
+
+3. Salve a imagem como "version3-dark.png" no mesmo diretório
+
+4. Quando a imagem estiver pronta, o tema escuro a usará automaticamente

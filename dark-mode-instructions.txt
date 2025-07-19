@@ -1,0 +1,23 @@
+Instruções para criar a versão escura da imagem de fundo:
+
+1. Abra a imagem "version3.png" em um editor de imagem como Photoshop, GIMP ou mesmo ferramentas online como Photopea.
+
+2. Aplique os seguintes ajustes:
+   - Diminua o brilho em cerca de 40-50%
+   - Aumente o contraste em cerca de 10-20%
+   - Reduza a saturação em cerca de 20-30%
+   - Opcionalmente, aplique um tom azulado ou arroxeado suave
+
+3. Salve a imagem como "version3-dark.png" no mesmo diretório.
+
+4. Depois de criar a imagem, atualize o arquivo theme-styles.css para usar a nova imagem:
+
+```css
+.dark-theme {
+  --bg-image: url('version3-dark.png');
+  --bg-overlay: none;
+  /* outras propriedades permanecem iguais */
+}
+```
+
+Isso substituirá o método atual que usa um overlay escuro sobre a imagem original.
